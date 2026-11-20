@@ -1,0 +1,79 @@
+{
+  "link": null,
+  "savedAt": "2026-11-20T22:29:49.504Z",
+  "runDuration": 4.24,
+  "official": false,
+  "testPassed": 0,
+  "testFailed": 1,
+  "cases": [
+    {
+      "conversational": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.7,
+          "success": true,
+          "score": 1,
+          "reason": "The score is 1.00 because the answer is fully relevant to the question and directly addresses what was asked with no irrelevant information. Great job keeping it precise and on-topic.",
+          "strictMode": false,
+          "flaky": false,
+          "evaluationModel": "gpt-5.4",
+          "evaluationCost": 0.0036175000000000005,
+          "verboseLogs": "Statements:\n[\n    \"London is the capital of France.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]",
+          "skipped": false
+        },
+        {
+          "name": "Correctness [GEval]",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0,
+          "reason": "The input asks for the capital of France, and the expected output shows the correct answer is Paris. The actual output directly answers the question but gives London, which is factually incorrect and contradicts the expected output.",
+          "strictMode": false,
+          "flaky": false,
+          "evaluationModel": "gpt-5.4",
+          "evaluationCost": 0.0035325,
+          "verboseLogs": "Criteria:\n\n      Evaluate whether the actual output\n      factually answers the user's question.\n\n      Compare factual meaning, not exact wording.\n      Penalize factually incorrect answers.\n     \n \nEvaluation Steps:\n[\n    \"Identify the factual claim or question in the Input and determine what information the Expected Output shows should be answered.\",\n    \"Compare the Actual Output to the Expected Output for factual meaning, ignoring differences in wording or phrasing.\",\n    \"Check whether the Actual Output directly and correctly answers the Input’s question as reflected by the Expected Output.\",\n    \"Penalize the Actual Output if it contains factual errors, contradictions, or missing key facts relative to the Input and Expected Output.\"\n] \n \nRubric:\nnull \n \nScore: 0",
+          "skipped": false
+        }
+      ],
+      "entry": {
+        "name": "test_case_0",
+        "input": "What is the capital of France?",
+        "actualOutput": "London is the capital of France.",
+        "expectedOutput": "Paris",
+        "success": false,
+        "flaky": false,
+        "metricsData": [
+          {
+            "name": "Answer Relevancy",
+            "threshold": 0.7,
+            "success": true,
+            "score": 1,
+            "reason": "The score is 1.00 because the answer is fully relevant to the question and directly addresses what was asked with no irrelevant information. Great job keeping it precise and on-topic.",
+            "strictMode": false,
+            "flaky": false,
+            "evaluationModel": "gpt-5.4",
+            "evaluationCost": 0.0036175000000000005,
+            "verboseLogs": "Statements:\n[\n    \"London is the capital of France.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]"
+          },
+          {
+            "name": "Correctness [GEval]",
+            "threshold": 0.5,
+            "success": false,
+            "score": 0,
+            "reason": "The input asks for the capital of France, and the expected output shows the correct answer is Paris. The actual output directly answers the question but gives London, which is factually incorrect and contradicts the expected output.",
+            "strictMode": false,
+            "flaky": false,
+            "evaluationModel": "gpt-5.4",
+            "evaluationCost": 0.0035325,
+            "verboseLogs": "Criteria:\n\n      Evaluate whether the actual output\n      factually answers the user's question.\n\n      Compare factual meaning, not exact wording.\n      Penalize factually incorrect answers.\n     \n \nEvaluation Steps:\n[\n    \"Identify the factual claim or question in the Input and determine what information the Expected Output shows should be answered.\",\n    \"Compare the Actual Output to the Expected Output for factual meaning, ignoring differences in wording or phrasing.\",\n    \"Check whether the Actual Output directly and correctly answers the Input’s question as reflected by the Expected Output.\",\n    \"Penalize the Actual Output if it contains factual errors, contradictions, or missing key facts relative to the Input and Expected Output.\"\n] \n \nRubric:\nnull \n \nScore: 0"
+          }
+        ],
+        "runDuration": 3.689,
+        "evaluationCost": 0.00715,
+        "order": 0
+      }
+    }
+  ],
+  "testRunId": null
+}
