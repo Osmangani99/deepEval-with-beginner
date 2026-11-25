@@ -1,4 +1,4 @@
-# DeepEval with TypeScript | AI Testing Practice
+# DeepEval with TypeScript | AI Testing
 
 A hands-on learning project for evaluating Large Language Model (LLM) responses using DeepEval, TypeScript and Vitest. This repository explores AI response quality through positive testing, negative testing, threshold experiments and combined metric evaluations.
 
