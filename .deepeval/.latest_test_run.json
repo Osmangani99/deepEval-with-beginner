@@ -1,7 +1,7 @@
 {
   "link": null,
-  "savedAt": "2026-11-20T22:29:49.504Z",
-  "runDuration": 4.24,
+  "savedAt": "2026-11-25T03:51:03.931Z",
+  "runDuration": 5.268,
   "official": false,
   "testPassed": 0,
   "testFailed": 1,
@@ -10,67 +10,47 @@
       "conversational": false,
       "metricsData": [
         {
-          "name": "Answer Relevancy",
-          "threshold": 0.7,
-          "success": true,
-          "score": 1,
-          "reason": "The score is 1.00 because the answer is fully relevant to the question and directly addresses what was asked with no irrelevant information. Great job keeping it precise and on-topic.",
-          "strictMode": false,
-          "flaky": false,
-          "evaluationModel": "gpt-5.4",
-          "evaluationCost": 0.0036175000000000005,
-          "verboseLogs": "Statements:\n[\n    \"London is the capital of France.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]",
-          "skipped": false
-        },
-        {
-          "name": "Correctness [GEval]",
-          "threshold": 0.5,
+          "name": "Hallucination",
+          "threshold": 0.8,
           "success": false,
-          "score": 0,
-          "reason": "The input asks for the capital of France, and the expected output shows the correct answer is Paris. The actual output directly answers the question but gives London, which is factually incorrect and contradicts the expected output.",
+          "score": 0.75,
+          "reason": "The score is 0.75 because the actual output mostly aligns with the contexts on returns, refund timing, and support availability, but it contains one clear contradiction about the free shipping threshold, stating over $100 instead of the correct over $50.",
           "strictMode": false,
           "flaky": false,
           "evaluationModel": "gpt-5.4",
-          "evaluationCost": 0.0035325,
-          "verboseLogs": "Criteria:\n\n      Evaluate whether the actual output\n      factually answers the user's question.\n\n      Compare factual meaning, not exact wording.\n      Penalize factually incorrect answers.\n     \n \nEvaluation Steps:\n[\n    \"Identify the factual claim or question in the Input and determine what information the Expected Output shows should be answered.\",\n    \"Compare the Actual Output to the Expected Output for factual meaning, ignoring differences in wording or phrasing.\",\n    \"Check whether the Actual Output directly and correctly answers the Input’s question as reflected by the Expected Output.\",\n    \"Penalize the Actual Output if it contains factual errors, contradictions, or missing key facts relative to the Input and Expected Output.\"\n] \n \nRubric:\nnull \n \nScore: 0",
+          "evaluationCost": 0.0054025,
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that customers can return products within 30 days.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that refunds are processed within 5 days.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context: it says free shipping is available on orders over $100, while the context states it is available on orders over $50. The correct statement would be that free shipping is available on orders over $50.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that customer support is available Monday through Friday.\"\n    }\n]",
           "skipped": false
         }
       ],
       "entry": {
         "name": "test_case_0",
-        "input": "What is the capital of France?",
-        "actualOutput": "London is the capital of France.",
-        "expectedOutput": "Paris",
+        "input": "What are your return, refund, shipping and support policies?",
+        "actualOutput": "\n            Customers can return products within 30 days.\n            Refunds are processed within 5 days.\n            Free shipping is available on orders over $100.\n            Customer support is available Monday through Friday.\n        ",
+        "context": [
+          "Customers can return products within 30 days.",
+          "Refunds are processed within 5 days.",
+          "Free shipping is available on orders over $50.",
+          "Customer support is available Monday through Friday."
+        ],
         "success": false,
         "flaky": false,
         "metricsData": [
           {
-            "name": "Answer Relevancy",
-            "threshold": 0.7,
-            "success": true,
-            "score": 1,
-            "reason": "The score is 1.00 because the answer is fully relevant to the question and directly addresses what was asked with no irrelevant information. Great job keeping it precise and on-topic.",
-            "strictMode": false,
-            "flaky": false,
-            "evaluationModel": "gpt-5.4",
-            "evaluationCost": 0.0036175000000000005,
-            "verboseLogs": "Statements:\n[\n    \"London is the capital of France.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]"
-          },
-          {
-            "name": "Correctness [GEval]",
-            "threshold": 0.5,
+            "name": "Hallucination",
+            "threshold": 0.8,
             "success": false,
-            "score": 0,
-            "reason": "The input asks for the capital of France, and the expected output shows the correct answer is Paris. The actual output directly answers the question but gives London, which is factually incorrect and contradicts the expected output.",
+            "score": 0.75,
+            "reason": "The score is 0.75 because the actual output mostly aligns with the contexts on returns, refund timing, and support availability, but it contains one clear contradiction about the free shipping threshold, stating over $100 instead of the correct over $50.",
             "strictMode": false,
             "flaky": false,
             "evaluationModel": "gpt-5.4",
-            "evaluationCost": 0.0035325,
-            "verboseLogs": "Criteria:\n\n      Evaluate whether the actual output\n      factually answers the user's question.\n\n      Compare factual meaning, not exact wording.\n      Penalize factually incorrect answers.\n     \n \nEvaluation Steps:\n[\n    \"Identify the factual claim or question in the Input and determine what information the Expected Output shows should be answered.\",\n    \"Compare the Actual Output to the Expected Output for factual meaning, ignoring differences in wording or phrasing.\",\n    \"Check whether the Actual Output directly and correctly answers the Input’s question as reflected by the Expected Output.\",\n    \"Penalize the Actual Output if it contains factual errors, contradictions, or missing key facts relative to the Input and Expected Output.\"\n] \n \nRubric:\nnull \n \nScore: 0"
+            "evaluationCost": 0.0054025,
+            "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that customers can return products within 30 days.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that refunds are processed within 5 days.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context: it says free shipping is available on orders over $100, while the context states it is available on orders over $50. The correct statement would be that free shipping is available on orders over $50.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context stating that customer support is available Monday through Friday.\"\n    }\n]"
           }
         ],
-        "runDuration": 3.689,
-        "evaluationCost": 0.00715,
+        "runDuration": 4.728,
+        "evaluationCost": 0.0054025,
         "order": 0
       }
     }
