@@ -1,0 +1,28 @@
+
+[
+  {
+    "id": 1,
+    "topic": "Return Policy",
+    "content": "Customers can return products within 30 days of purchase. A receipt is required."
+  },
+  {
+    "id": 2,
+    "topic": "Refund Policy",
+    "content": "Refunds are processed within 5 business days."
+  },
+  {
+    "id": 3,
+    "topic": "Shipping Policy",
+    "content": "Free shipping is available for orders over $50."
+  },
+  {
+    "id": 4,
+    "topic": "Customer Support",
+    "content": "Customer support is available Monday through Friday."
+  },
+  {
+    "id": 5,
+    "topic": "Order Cancellation",
+    "content": "Customers can cancel orders within 24 hours of placing the order."
+  }
+]

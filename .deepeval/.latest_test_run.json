@@ -1,7 +1,7 @@
 {
   "link": null,
-  "savedAt": "2026-11-25T05:27:40.477Z",
-  "runDuration": 6.37,
+  "savedAt": "2026-11-26T05:13:40.387Z",
+  "runDuration": 6.855,
   "official": false,
   "testPassed": 0,
   "testFailed": 1,
@@ -14,11 +14,11 @@
           "threshold": 0.7,
           "success": true,
           "score": 1,
-          "reason": "The score is 1.00 because there are no contradictions—the actual output appears fully consistent with the retrieval context. Nice job keeping it faithful and aligned.",
+          "reason": "The score is 1.00 because there are no contradictions, so the actual output appears fully consistent with the retrieval context—great job.",
           "strictMode": false,
           "flaky": false,
           "evaluationModel": "gpt-5.4",
-          "evaluationCost": 0.004772500000000001,
+          "evaluationCost": 0.004727500000000001,
           "verboseLogs": "Truths (limit=undefined):\n[\n    \"Customers can return products within 60 days.\"\n] \n \nClaims:\n[\n    \"Customers can return products within 60 days.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]",
           "skipped": false
         },
@@ -27,12 +27,12 @@
           "threshold": 0.7,
           "success": false,
           "score": 0,
-          "reason": "The score is 0.00 because the actual output directly contradicts the context by stating a 60-day return window when the context clearly says returns are allowed within 30 days.",
+          "reason": "The score is 0.00 because the actual output directly contradicts the context on a key fact: it states a 60-day return window, while the context clearly says returns are allowed within 30 days, with no supporting alignments.",
           "strictMode": false,
           "flaky": false,
           "evaluationModel": "gpt-5.4",
-          "evaluationCost": 0.0033550000000000003,
-          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context. The context states customers can return products within 30 days, not 60 days.\"\n    }\n]",
+          "evaluationCost": 0.00385,
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context: the context says customers can return products within 30 days, while the actual output says 60 days. A correction would be: Customers can return products within 30 days.\"\n    }\n]",
           "skipped": false
         }
       ],
@@ -54,11 +54,11 @@
             "threshold": 0.7,
             "success": true,
             "score": 1,
-            "reason": "The score is 1.00 because there are no contradictions—the actual output appears fully consistent with the retrieval context. Nice job keeping it faithful and aligned.",
+            "reason": "The score is 1.00 because there are no contradictions, so the actual output appears fully consistent with the retrieval context—great job.",
             "strictMode": false,
             "flaky": false,
             "evaluationModel": "gpt-5.4",
-            "evaluationCost": 0.004772500000000001,
+            "evaluationCost": 0.004727500000000001,
             "verboseLogs": "Truths (limit=undefined):\n[\n    \"Customers can return products within 60 days.\"\n] \n \nClaims:\n[\n    \"Customers can return products within 60 days.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\"\n    }\n]"
           },
           {
@@ -66,16 +66,16 @@
             "threshold": 0.7,
             "success": false,
             "score": 0,
-            "reason": "The score is 0.00 because the actual output directly contradicts the context by stating a 60-day return window when the context clearly says returns are allowed within 30 days.",
+            "reason": "The score is 0.00 because the actual output directly contradicts the context on a key fact: it states a 60-day return window, while the context clearly says returns are allowed within 30 days, with no supporting alignments.",
             "strictMode": false,
             "flaky": false,
             "evaluationModel": "gpt-5.4",
-            "evaluationCost": 0.0033550000000000003,
-            "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context. The context states customers can return products within 30 days, not 60 days.\"\n    }\n]"
+            "evaluationCost": 0.00385,
+            "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The actual output contradicts the context: the context says customers can return products within 30 days, while the actual output says 60 days. A correction would be: Customers can return products within 30 days.\"\n    }\n]"
           }
         ],
-        "runDuration": 5.626,
-        "evaluationCost": 0.008127500000000001,
+        "runDuration": 6.249,
+        "evaluationCost": 0.008577500000000002,
         "order": 0
       }
     }
